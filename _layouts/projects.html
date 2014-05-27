@@ -1,0 +1,15 @@
+{% include header.html %}
+<!-- Header Wrapper -->
+<div id="header-wrapper">
+  <div class="container">
+    {% include nav.html %}
+
+    {% if page.project_index %}
+      {% include project_index.html %}
+    {% endif %}
+    
+  </div>
+</div>
+
+{% include footer.html %}
+

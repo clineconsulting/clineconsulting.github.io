@@ -1,0 +1,193 @@
+name: Cline Consulting Group
+pygments: false
+markdown: kramdown
+paginate: 10
+version: 1
+seo:
+  author: "Nicholas Kingston, Scott Schaffter - Bivee LLC"
+  description: "Cline consulting group. Advising ICT service providers, policy-makers and investors around The World."
+  keywords:
+
+contact:
+  phone: '202-746-8441'
+  email: 'front.desk@clinecg.com'
+  address-line1: 'Cline Consulting Group'
+  address-line2: '2101 Wilson Blvd'
+  address-line3: 'Arlington, VA 22201'
+  map-link: 'https://goo.gl/maps/uQkLR'
+
+baseurl: /
+permalink: /:title
+
+sitedata:
+  regions: ['americas', 'emea', 'asia']
+
+social:
+google:
+  analytics : 'UA-48412611-1'
+  domain: 'clinecg.com'
+
+assets:
+  img: '/assets/images/'
+  css: '/assets/css/'
+  js: '/assets/js/'
+  clients: '/assets/images/clients/'
+  projects: '/assets/images/projects/'
+  team: '/assets/images/team/'
+
+prose:
+  rooturl: '_posts'
+  siteurl: ''
+  media: 'uploads'
+  ignore:
+    - index.md
+    - index.html
+    - _config.yml
+    - /_layouts
+    - /_includes
+
+  metadata:
+    _posts:
+      - name: 'title'
+        field:
+          element: 'text'
+          label: 'Client Name'
+          help: 'Enter the name of the client (optional)'
+
+    _posts/clients:
+      - name: 'category'
+        field:
+          element: 'hidden'
+          value: 'client'
+      - name: 'title'
+        field:
+          element: 'text'
+          label: 'Client Name'
+          help: 'Enter the name of the client (optional)'
+      - name: 'link'
+        field:
+          element: 'text'
+          label: 'Client Website URL'
+          help: 'Enter the URL of the client (optional)'
+      - name: 'image'
+        field:
+          element: 'text'
+          label: 'Image Name (including extension)'
+          help: 'Enter the name of the image uploaded. (including extension)'
+
+    _posts/projects:
+      - name: 'layout'
+        field:
+          element: 'hidden'
+          value: 'single_project'
+      - name: 'category'
+        field:
+          element: 'hidden'
+          value: 'project'
+      - name: 'title'
+        field:
+          element: 'text'
+          label: 'Project Title'
+          help: 'Enter the title of the project'
+      - name: 'country'
+        field:
+          element: 'text'
+          label: 'Project country'
+          help: 'Enter the country of the project'
+      - name: 'region'
+        field:
+          element: 'select'
+          options:
+            - name: 'Asia'
+              value: 'asia'
+            - name: 'Latin America'
+              value: 'latin america'
+            - name: 'Middle East'
+              value: 'middle east'
+          label: 'Project Region'
+          help: 'Select the project region'
+      - name: 'highlight'
+        field:
+          element: 'checkbox'
+          label: 'Highlight On Front Page'
+          help: 'Select if you want to show this project on the front page'
+      - name: 'image'
+        field:
+          element: 'text'
+          label: 'Image Name (including extension)'
+          help: 'Enter the name of the image uploaded (including extension)'
+      - name: 'hosted-image'
+        field:
+          element: 'text'
+          label: 'Image URL (including extension)'
+          help: 'Enter the name of the image URL you are referencing.'
+
+    _posts/skills:
+      - name: 'category'
+        field:
+          element: 'hidden'
+          value: 'skills'
+      - name: 'title'
+        field:
+          element: 'text'
+          label: 'Skill Title'
+          help: 'Enter the title of the project'
+      - name: 'placement'
+        field:
+          element: 'select'
+          options:
+            - name: 'First'
+              value: 'first'
+            - name: 'Second'
+              value: 'second'
+            - name: 'Third'
+              value: 'third'
+            - name: 'Foruth'
+              value: 'fourth'
+          label: 'Positioning'
+          help: 'Select the order of the skill'
+      - name: 'icon'
+        field:
+          element: 'text'
+          label: 'Icon Name'
+          help: 'Select the icon name ex: fa-star from http://fontawesome.io/icons/'
+
+    _posts/team:
+      - name: 'layout'
+        field:
+          element: 'hidden'
+          value: 'single_team'
+      - name: 'category'
+        field:
+          element: 'hidden'
+          value: 'team'
+      - name: 'name'
+        field:
+          element: 'text'
+          label: 'Team Member Name'
+          help: 'Enter the title of the team member'
+      - name: 'job_title'
+        field:
+          element: 'text'
+          label: 'Job Title'
+          help: 'Enter the Job Title of the team member'
+      - name: 'teaser'
+        field:
+          element: 'text'
+          label: 'Team Member Teaser'
+          help: 'A very short blurb about the team member. Used on overall team page.'
+      - name: 'image'
+        field:
+          element: 'text'
+          label: 'Image Name (including extension)'
+          help: 'Enter the name of the image uploaded. (including extension)'
+      - name: 'circle-adjustments'
+        field:
+          element: 'text'
+          label: 'Profile Image Adjustments'
+          help: 'Enter the CSS values to adjust the large circle image'
+      - name: 'small-circle-adjustments'
+        field:
+          element: 'text'
+          label: 'Small Profile Image Adjustments'
+          help: 'Enter the CSS values to adjust the small circle image'

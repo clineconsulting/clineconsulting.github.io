@@ -1,0 +1,66 @@
+<div class="row">
+  <div class="12u">
+      
+    <!-- Intro -->
+      <section id="intro">
+      
+        <div>
+          <div class="row skills">
+          {% for post in site.categories.skills reversed %}
+
+            {% if post.placement == 'first' %}
+            <div class="3u">
+
+              <section class="middle">
+                <span class="pennant"><span class="fa {{ post.icon }}"></span></span>
+                <header>
+                  <h2>{{ post.title }}</h2>
+                </header>
+                <p>{{ post.content }}</p>
+              </section>
+            </div>
+            {% endif %}
+            
+            {% if post.placement == 'second' %}
+            <div class="3u">
+              <section class="middle">
+                <span class="pennant pennant-alt"><span class="fa {{ post.icon }}"></span></span>
+                <header>
+                  <h2>{{ post.title }}</h2>
+                </header>
+                <p>{{ post.content }}</p>
+              </section>
+            </div>
+            {% endif %}
+
+            {% if post.placement == 'third' %}
+            <div class="3u">
+              <section class="middle">
+                <span class="pennant pennant-alt3"><span class="fa {{ post.icon }}"></span></span>
+                <header>
+                  <h2>{{ post.title }}</h2>
+                </header>
+                <p>{{ post.content }}</p>
+              </section>
+            </div>
+            {% endif %}
+
+            {% if post.placement == 'fourth' %}
+            <div class="3u">
+              <section class="middle">
+                <span class="pennant pennant-alt2"><span class="fa {{ post.icon }}"></span></span>
+                <header>
+                  <h2>{{ post.title }}</h2>
+                </header>
+                <p>{{ post.content }}</p>
+              </section>
+            </div>
+            {% endif %}
+
+          {% endfor %}
+          </div>
+        </div>
+      </section>
+
+  </div>
+</div>

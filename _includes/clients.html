@@ -1,0 +1,23 @@
+<div class="row">
+  <div class="12u">
+    
+    <!-- Clients -->
+      <section>
+        <header class="major">
+          <h2>Recent Clients</h2>
+        </header>
+         <section class="box">
+            <div class="row">
+              <div class="12u" id="clients">
+                <div class="image-grid">
+                  {% for client in site.categories.client %}
+                  <a href="{{ client.link }}" target="_blank"><img src="{{site.assets.clients}}{{client.image}}" alt="" /></a>
+                  {% endfor %}
+                </div>
+              </div>
+            </div>
+          </section>
+      </section>
+
+  </div>
+</div>

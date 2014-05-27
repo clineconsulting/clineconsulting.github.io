@@ -1,0 +1,38 @@
+{% include header.html %}
+<!-- Header Wrapper -->
+<div id="header-wrapper">
+  <div class="container">
+{% include nav.html %}
+  </div>
+</div>
+<!-- Main Wrapper -->
+<div id="main-wrapper">
+  <div class="container">
+    <div class="row">
+      <div class="-2u 8u">
+        
+        <!-- Portfolio -->
+          <section>
+            <div>
+              <div class="row">
+                <div class="12u skel-cell-important">
+                                        <!-- Content -->
+                          <article class="box is-post">
+                            <header class="profile">
+                              <div class="circle center_image"><img src="{{site.assets.team}}{{page.image}}" style="{{page.circle-adjustments}}" /></div>
+                              <h2>{{page.name}}</h2>
+                              <span class="byline">{{page.job_title}}</span>
+                            </header>
+                          {{ content }}
+                          </article>
+                          </div>
+                        </div>
+                      </div>
+                    </section>
+
+                </div>
+              </div>
+            </div>
+          </div>
+
+{% include footer.html %}

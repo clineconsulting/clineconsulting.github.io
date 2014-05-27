@@ -1,0 +1,23 @@
+<div class="row">
+  <div class="12u">
+  
+    <!-- Header -->
+      <section id="header">
+        
+        <!-- Logo -->
+          <a href="{{site.url}}/"><div><img src="{{site.assets.img }}cline_logo.png"/></div></a>
+        
+        <!-- Nav -->
+          <nav id="nav">
+            <ul>
+              <li {% if page.layout == "default" %} class="current_page_item" {% endif %} ><a href="{{site.url}}/">Home</a></li>
+              <li {% if page.layout == "projects" %} class="current_page_item" {% endif %} ><a href="{{site.url}}/projects">Projects</a></li>
+              <li{% if page.layout == "team" %} class="current_page_item" {% endif %}><a href="{{site.url}}/team">Our Team</a></li>
+              <li><a href="mailto:{{ site.contact.email }}">Contact Us</a></li>
+            </ul>
+          </nav>
+
+      </section>
+
+  </div>
+</div>

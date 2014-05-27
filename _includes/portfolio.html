@@ -1,0 +1,44 @@
+<div class="row">
+  <div class="12u">
+    
+    <!-- Portfolio -->
+      <section class="portfolio center_image">
+        <img src="{{ include.region_image }}" />
+        <header>
+          <h2>{{ include.title }}</h2>
+        </header>
+
+          {% assign post_count = 1 %}
+
+          {% for post in site.categories.project %}
+
+            {% assign fourth = post_count|modulo:4 %}
+            {% assign eighth = post_count|modulo:8 %}
+
+              {% if post_count == 1 or fourth == 0 %}
+                <div class="row">
+              {% endif %}
+
+                 {% if post.region == include.region %}
+                    <div class="4u">
+                      <section class="box">
+                        <header>
+                          <h3>{{ post.title }}</h3>
+                          <span class="byline">{{post.country}}</span>
+                        </header>
+                        <p> {{ post.content }} </p>
+                      </section>
+                    </div>
+                 {% assign post_count = post_count|plus:1 %}
+                {% endif %}
+
+              {% if eighth == 0 or post_count == 4 %}
+              </div>
+              {% endif %}
+          {% endfor %}
+
+                   
+      </section>
+
+  </div>
+</div>
